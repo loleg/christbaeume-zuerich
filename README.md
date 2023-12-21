@@ -1,21 +1,53 @@
-This is a boilerplate [Data Package](https://frictionlessdata.io/data-packages/) in the form of a [GitHub Template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template#about-repository-templates).
+Did you know that almost 12 km² (11'915 [Aren](https://en.wikipedia.org/wiki/Hectare#Are)) are dedicated to the growth of Christmas trees in the Canton of Zürich? When the City of Zürich posted some data about the issues of clearing away the trees after the holidays that I got thinking about where all this growth happens. It's quite phenomenal to imagine the migration of thousands of trees from the countryside and into the city, and to think about some of the sustainability issues involved.
 
-> *Instructions: download, extract and modify this repository on your computer, then create a new repository and upload your work. Start by editing the `README.md` file, changing this text to a short summary of what this data set is about. If this sounds difficult, you should also consider using [data desktop](http://datahub.io/download) as a starting point.*
+This repository is here to spark a conversation. It is a [Data Package](https://frictionlessdata.io/data-packages/) that you can load into open source software for analysis.
+
+# Preview
+
+These visualizations of the data were made using the open source [QGIS](https://qgis.org) program with open access datasets from [swisstopo](https://www.swisstopo.admin.ch/en/geodata/).
+
+![](images/qgis-kanton.jpg)
+
+_The Canton of Zürich with exaggerated locations of Christmas tree farms._
+
+![](images/qgis-zoomedin.jpg)
+
+_Zooming in on a larger parcel, with satellite imagery showing neatly planted Christmas trees._
 
 # Data
 
-> *Instructions: Accessible data files (ideally in simple data formats such as [CSV](https://frictionlessdata.io/guides/csv/), [JSON](http://json-schema.org/specification.html) and [GeoJSON](http://geojson.org/)), as well as the raw data, are placed in the `data` folder. In this section you should mention the files and formats included. It is good to suggest purposes for this data, such as example applications or use cases.
+The dataset shared here is an extract of Landwirtschaftliche Nutzungsflächen (Agricultural utilisation areas) of the Canton of Zürich. You can find it as open data on the portals of the [City of Zürich](https://www.stadt-zuerich.ch/geodaten/download/170) or the national open data portal:
+
+https://opendata.swiss/de/dataset/landwirtschaftliche-nutzungsflachen
+
+Detailed information on the geodata can be found here:
+
+https://www.geolion.zh.ch/geodatensatz/show?gdsid=170
+
+The data is obtained through self-declaration by farmers during structural data collection of agricultural data.
 
 # Usage
 
-> Include any relevant background, contact points, and links that may help people to use this data. You can find examples of this at [datahub.io](https://datahub.io) or [github.com/datasets](https://github.com/datasets), and further tips at [frictionlessdata.io](https://frictionlessdata.io/guides/data-package/) and [datahub.io](https://datahub.io/docs/data-packages/publish-faq)*.
+Add a WFS / OGC API connection in the Browser of your QGIS application. Put in the link to the City of Zürich mapping service. You can find it by clicking the WFS button at the [bottom of this page](https://www.stadt-zuerich.ch/geodaten/download/170).
 
-# Preparation
+In a few seconds you should see a long list of layers. Scroll down until you find "Landwirtschaftliche Nutzungsflächen" and double-click to add it to your map.
 
-> *Instructions: describe here where you obtained the data, how it was created, where and how it was extracted, and any transformation steps that took place during publication. Link to the sources, as well as to any tools that were used. If you used any scripts to extract and convert the data, add them to a `script` folder in your repository.*
+To filter down to the Christmas trees, open the Attribute table by right-clicking on the layer. Note that this may take a few minutes to process - even on a fast machine and fast Internet connection. Use the filter screne, and enter the word "Christbäume" into the `blw_name` column, as in this screenshot:
+
+![](images/qgis-filter.png)
+
+You can finally add some more layers to your QGIS project - we suggest using the SWISSIMAGE or Basiskarte GIN from swisstopo, which you can load in a similar way as above - just using WMS/WMTS and not WFS - with instructions here: https://www.swisstopo.admin.ch/en/geodata/geoservices/bgdi-services.html
+
+Then you should be able to create a map like the one shown at the top of this document.
+
+To do some further analysis, export the filtered layer to CSV format. Then you can use [LibreOffice](https://libreoffice.org) or another tool to do some statistics on the data:
+
+![](images/libreoffice-flaeche.png)
+
+We have provided the CSV and GeoJSON versions conveniently for you in the [data folder](data/).
 
 # License
 
-> *Instructions: check the text below, and adapt it and the `LICENSE.md` file as needed. Explain any special conditions which allow the (re)publication of this data. Anything that may be relevant to future users of the data should be explained here.*
-
 This Data Package is made available by its maintainers under the [Public Domain Dedication and License v1.0](http://www.opendatacommons.org/licenses/pddl/1.0/), a copy of the full text of which is in [LICENSE.md](LICENSE.md).
+
+Always check the terms of use of the original dataset before using for non-commercial or commercial purposes.

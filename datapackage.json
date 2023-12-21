@@ -1,36 +1,197 @@
 {
-  "name": "datapackage-boilerplate",
-  "title": "A Boilerplate Data Package",
   "profile": "tabular-data-package",
-  "datapackage_version": "1.0.0",
-  "last_modified": "2022-01-01",
+  "resources": [
+    {
+      "name": "christbaeume",
+      "path": "christbaeume-zuerich.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "gis_nr",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "farm_id",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "bfsnr",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "gembez",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "estate_nr",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "flaeche",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "blw_nr",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "blw_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "harvest_date",
+            "type": "any",
+            "format": "default"
+          },
+          {
+            "name": "has_nhg_contract",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "lz_code",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "hang_50",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "hang_reb_0",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "hang_reb_30",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "hang_reb_50",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "einzelkulturbeitrag",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "outside_canton",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "bfs_parz",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "birth",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "bfsnr_num",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "has_bff_q2_contract",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "has_connectivity_contract",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "has_lqb_contract",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "contribution",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "used",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "operating_rate",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "hang_0",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "hang_18",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "hang_35",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "q1_from",
+            "type": "any",
+            "format": "default"
+          },
+          {
+            "name": "geodb_oid",
+            "type": "integer",
+            "format": "default"
+          }
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    "christmas",
+    "agriculture",
+    "zurich"
+  ],
+  "name": "christbaeume-zuerich",
+  "title": "Christmas tree agriculture in Zürich",
+  "description": "An extract of \"Landwirtschaftliche Nutzungsflächen\" (Agricultural utilisation areas) of the Canton of Zürich.",
+  "homepage": "https://opendata.swiss/de/dataset/landwirtschaftliche-nutzungsflachen",
+  "version": "1.0.0",
+  "contributors": [
+    {
+      "title": "O Lavrovsky",
+      "role": "author"
+    }
+  ],
   "licenses": [
     {
       "name": "ODC-PDDL-1.0",
-      "path": "http://opendatacommons.org/licenses/pddl/",
-      "title": "Open Data Commons Public Domain Dedication and License v1.0"
-    }
-  ],
-  "maintainers": [
-    {
-      "title": "School of Data CH",
-      "web": "https://schoolofdata.ch/"
-    }
-  ],
-  "sources": [
-    {
-      "name": "Sample Data Source",
-      "web": "http://www..."
-    }
-  ],
-  "resources": [
-    {
-      "name": "sample-resource-1"
-      "path": "data/some-good-data.csv",
-      "profile": "tabular-data-resource",
-      "schema": {
-        "fields": []
-      }
+      "title": "Open Data Commons Public Domain Dedication and Licence 1.0",
+      "path": "http://www.opendefinition.org/licenses/odc-pddl"
     }
   ]
 }
